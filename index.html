@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve Jobs - Vizyoner Bir Liderin Mirası</title>
+    <!-- Tailwind CSS yüklemesi -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter yazı tipini kullanmak için Tailwind konfigürasyonu -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'apple-dark': '#1D1D1F',
+                        'apple-light': '#F5F5F7',
+                        'apple-blue': '#0070c9',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Genel yazı tipi ayarı */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        /* Hero bölümü için özel stil */
+        .hero-section {
+            background-color: #000;
+            color: #fff;
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Başlıkta hafif bir gölge ve 3D hissi */
+        .hero-title {
+            text-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Kartlar için zarif gölge */
+        .vision-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .vision-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Yatay bir çizgi (separator) */
+        .separator {
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #a0a0a0, #e0e0e0);
+            margin: 4rem 0;
+        }
+
+        /* Jobs'ın ikonik fotoğrafı için arka plan stili */
+        .quote-bg {
+            background-image: url('https://placehold.co/1200x600/1D1D1F/FFFFFF?text=STEVE+JOBS+FOTOĞRAFI');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Paralaks etkisi için */
+        }
+
+        /* Biyografi Timeline Stili */
+        .bio-timeline-item {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .bio-timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 8px;
+            height: 8px;
+            background-color: #0070c9;
+            border-radius: 50%;
+        }
+        .bio-timeline-container {
+            border-left: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body class="bg-apple-light text-apple-dark">
+
+    <!-- 1. Hero Bölümü - Minimalist ve Etkileyici -->
+    <header class="hero-section text-center">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="relative z-10">
+                <!-- Jobs'ın ikonik silüetini temsilen büyük bir başlık -->
+                <h1 class="hero-title text-6xl md:text-8xl font-extrabold tracking-tight mb-4 opacity-90">
+                    STEVE JOBS
+                </h1>
+                <p class="text-xl md:text-2xl font-light italic mb-8 max-w-3xl mx-auto">
+                    "Dünyayı değiştirecek kadar çılgın olanlar, bunu yapanlardır."
+                </p>
+                <a href="#miras" class="inline-block bg-apple-blue text-white text-lg font-semibold py-3 px-8 rounded-full hover:bg-opacity-90 transition duration-300 shadow-xl">
+                    Mirasını Keşfet
+                </a>
+            </div>
+            <!-- Görsel bir derinlik katmanı -->
+            <div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at center, #333 0%, #000 70%);"></div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 max-w-7xl">
+
+        <!-- 2. Vizyon ve Felsefe Bölümü -->
+        <section id="vizyon" class="mb-20">
+            <h2 class="text-4xl font-bold text-center mb-12">Vizyonun Temel Taşları</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Kart 1: Tasarım -->
+                <div class="vision-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-apple-blue mb-4 text-3xl">
+                        <!-- Basit bir ikon (Lucide icon yerine SVG kullanıyoruz) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Minimalist Tasarım</h3>
+                    <p class="text-gray-600">
+                        "Tasarım sadece nasıl göründüğü ve hissettirdiği değildir. Tasarım, nasıl çalıştığıdır." Karmaşıklığı ortadan kaldıran, kullanıcı deneyimini önceliklendiren bir estetik anlayışı.
+                    </p>
+                </div>
+
+                <!-- Kart 2: İnovasyon -->
+                <div class="vision-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-apple-blue mb-4 text-3xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Sürekli İnovasyon</h3>
+                    <p class="text-gray-600">
+                        Pazar araştırmasına değil, geleceğe odaklanma. Müşterilerin ne istediğini onlardan önce bilme yeteneği ve devrim niteliğinde ürünler (Mac, iPod, iPhone, iPad) yaratma cesareti.
+                    </p>
+                </div>
+
+                <!-- Kart 3: Tutku -->
+                <div class="vision-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-apple-blue mb-4 text-3xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">İşi Sevmek</h3>
+                    <p class="text-gray-600">
+                        "Harika işler yapmanın tek yolu, yaptığın işi sevmektir." Bu tutku, hem Apple'ın DNA'sına işledi hem de çalışanları mükemmelliğe ulaşmak için motive etti.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Yatay Çizgi -->
+        <div class="separator"></div>
+
+        <!-- 3. Yeni Biyografi Bölümü: Kariyerin Dönüm Noktaları -->
+        <section id="biyografi" class="mb-20">
+            <h2 class="text-4xl font-bold text-center mb-12">Kariyer Yolu: Dönüşler ve İcatlar</h2>
+            <div class="max-w-4xl mx-auto bio-timeline-container space-y-8 pl-8 md:pl-0">
+                
+                <!-- Biyografi Madde 1: Kuruluş ve İlk Yıllar -->
+                <div class="bio-timeline-item">
+                    <h3 class="text-2xl font-semibold mb-1">1976 - Apple'ın Doğuşu</h3>
+                    <p class="text-gray-700">Steve Wozniak ve Ronald Wayne ile birlikte Apple Computer'ı kurdu. Bu dönemde Apple I ve ardından ticari başarı getiren Apple II kişisel bilgisayarını piyasaya sürdü. Jobs, şirketin pazarlama ve vizyon lideri olarak öne çıktı.</p>
+                </div>
+
+                <!-- Biyografi Madde 2: Macintosh ve Ayrılış -->
+                <div class="bio-timeline-item">
+                    <h3 class="text-2xl font-semibold mb-1">1984 - Macintosh ve Dramatik Ayrılık</h3>
+                    <p class="text-gray-700">Grafiksel kullanıcı arayüzünü (GUI) ana akıma taşıyan Macintosh'un lansmanına öncülük etti. Ancak, şirket içi güç mücadeleleri nedeniyle 1985 yılında Apple'dan ayrılmak zorunda kaldı. Bu olay, Jobs'ın kariyerinde bir dönüm noktası oldu.</p>
+                </div>
+
+                <!-- Biyografi Madde 3: NeXT ve Pixar -->
+                <div class="bio-timeline-item">
+                    <h3 class="text-2xl font-semibold mb-1">1985 - Sürgün Yılları: NeXT ve Pixar</h3>
+                    <p class="text-gray-700">Apple'dan ayrıldıktan sonra eğitim ve iş dünyası için yüksek teknolojiye sahip bilgisayarlar geliştiren NeXT Computer'ı kurdu. Aynı zamanda, Graphics Group'u (daha sonra **Pixar** adını alacak) satın alarak animasyon dünyasında devrim yaratan bir stüdyoya dönüştürdü.</p>
+                </div>
+
+                <!-- Biyografi Madde 4: Apple'a Geri Dönüş -->
+                <div class="bio-timeline-item">
+                    <h3 class="text-2xl font-semibold mb-1">1997 - İnanılmaz Geri Dönüş</h3>
+                    <p class="text-gray-700">Apple, NeXT'i satın alarak Jobs'ı şirkete geri getirdi. Jobs, kısa sürede geçici CEO (iCEO) pozisyonuna yükseldi ve şirketi iflastan kurtarmak için radikal adımlar attı. iMac'in parlak tasarımı ile Apple'ın yeniden doğuşunu başlattı.</p>
+                </div>
+
+                <!-- Biyografi Madde 5: iPod, iPhone ve Miras -->
+                <div class="bio-timeline-item">
+                    <h3 class="text-2xl font-semibold mb-1">2001-2011 - Devrim Çağı</h3>
+                    <p class="text-gray-700">iPod (2001), iPhone (2007) ve iPad (2010) gibi ürünlerle kişisel teknolojinin sınırlarını yeniden çizdi. Jobs, sağlık sorunları nedeniyle 2011 yılında Apple CEO'luğundan istifa etti ve kısa süre sonra vefat etti, geride modern dünyayı şekillendiren bir miras bıraktı.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yatay Çizgi -->
+        <div class="separator"></div>
+
+        <!-- 4. İkonik Ürünler Zaman Çizelgesi -->
+        <section id="urunler" class="mb-20">
+            <h2 class="text-4xl font-bold text-center mb-12">Dönüm Noktası Ürünler</h2>
+            <div class="space-y-12 relative before:absolute before:left-2 before:md:left-1/2 before:-translate-x-1/2 before:top-0 before:h-full before:w-1 before:bg-gray-300 before:rounded-full">
+                
+                <!-- Ürün 1: Apple I & II (Başlangıç) -->
+                <div class="relative md:flex md:justify-start md:items-center w-full">
+                    <div class="md:w-1/2 md:pr-10">
+                        <div class="bg-white p-6 rounded-xl shadow-xl vision-card">
+                            <h3 class="text-2xl font-bold text-apple-blue mb-2">1976: Apple I & II</h3>
+                            <p class="text-gray-600">Apple'ın kuruluşu ve kişisel bilgisayar pazarının temellerini atan Apple II, Jobs ve Wozniak'ın ilk büyük başarısı oldu. Kullanıcı dostu tasarımıyla öne çıktı.</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-4 w-4 bg-apple-blue rounded-full z-10 border-4 border-white"></div>
+                </div>
+                
+                <!-- Ürün 2: Macintosh (Tasarım Devrimi) -->
+                <div class="relative md:flex md:justify-end md:items-center w-full">
+                    <div class="md:w-1/2 md:pl-10">
+                        <div class="bg-white p-6 rounded-xl shadow-xl vision-card">
+                            <h3 class="text-2xl font-bold text-apple-blue mb-2">1984: Macintosh</h3>
+                            <p class="text-gray-600">Grafiksel kullanıcı arayüzü (GUI) ve fareyi ana akıma taşıyan Mac, bilgisayar kullanımını kökten değiştirdi ve 'insanlar için teknoloji' vizyonunu pekiştirdi.</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-4 w-4 bg-apple-blue rounded-full z-10 border-4 border-white"></div>
+                </div>
+
+                <!-- Ürün 3: iPod (Müzik Sektörü) -->
+                <div class="relative md:flex md:justify-start md:items-center w-full">
+                    <div class="md:w-1/2 md:pr-10">
+                        <div class="bg-white p-6 rounded-xl shadow-xl vision-card">
+                            <h3 class="text-2xl font-bold text-apple-blue mb-2">2001: iPod</h3>
+                            <p class="text-gray-600">"Cebinizdeki 1000 şarkı." iPod, dijital müzik deneyimini basitleştirerek ve iTunes ile birleştirerek müzik endüstrisini yeniden şekillendirdi.</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-4 w-4 bg-apple-blue rounded-full z-10 border-4 border-white"></div>
+                </div>
+
+                <!-- Ürün 4: iPhone (Mobil Devrim) -->
+                <div class="relative md:flex md:justify-end md:items-center w-full">
+                    <div class="md:w-1/2 md:pl-10">
+                        <div class="bg-white p-6 rounded-xl shadow-xl vision-card">
+                            <h3 class="text-2xl font-bold text-apple-blue mb-2">2007: iPhone</h3>
+                            <p class="text-gray-600">İnterneti, telefonu ve müzik çaları tek bir cihazda birleştiren iPhone, akıllı telefon çağını başlattı ve modern mobil teknolojinin standardını belirledi.</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-4 w-4 bg-apple-blue rounded-full z-10 border-4 border-white"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. İkonik Alıntı Bölümü (Göz Alıcı) -->
+        <section id="miras" class="quote-bg bg-fixed bg-black rounded-xl p-16 md:p-24 flex items-center justify-center mb-20">
+            <div class="text-center bg-black bg-opacity-70 p-8 rounded-lg">
+                <blockquote class="text-2xl md:text-4xl italic font-light text-white leading-snug">
+                    "Connect the dots. Geriye dönüp bakınca noktaları birleştirebilirsiniz, ileriye bakarak değil. Bu yüzden, noktaların gelecekte bir şekilde birleşeceğine güvenmeniz gerekir."
+                </blockquote>
+                <footer class="mt-6 text-xl font-medium text-gray-300">- Steve Jobs (Stanford Mezuniyet Konuşması, 2005)</footer>
+            </div>
+        </section>
+
+        <!-- 6. Hayat Felsefesi (Stay Hungry, Stay Foolish) -->
+        <section class="text-center mb-20">
+            <h2 class="text-4xl font-bold mb-6">Aç Kal. Aptal Kal.</h2>
+            <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto">
+                Jobs'ın hayata bakış açısının ve Stanford'daki ikonik konuşmasının özeti, daima yeni şeyler öğrenmeye istekli olmayı, kurulu düzeni sorgulamayı ve kendi iç sesine güvenmeyi teşvik eder. Bu felsefe, Apple'ın ve teknoloji dünyasının geleceğini şekillendirmiştir.
+            </p>
+            <div class="mt-8">
+                <a href="https://www.youtube.com/watch?v=UF8uR6gtHIE" target="_blank" class="inline-block bg-apple-dark text-white text-lg font-semibold py-3 px-8 rounded-full hover:bg-gray-700 transition duration-300">
+                    Konuşmayı İzle (Harici)
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-apple-dark text-white py-10 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-sm">
+                &copy; 2025 Steve Jobs Mirası. Afilli bir övgü sayfası denemesidir.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
